@@ -1,29 +1,26 @@
-# AsiaCCS 2026: Privacy Evaluation Framework
+# Reproducibility Package: Privacy Evaluation Framework
+**Submission for AsiaCCS 2026**
 
-## Reproducibility Package
-This repository provides the dataset and processing tasks required to replicate the evaluation framework proposed in the poster.
+This repository contains the source code, dataset, and reproduction scripts for the poster: **"A Structured Framework for the Reproducible Evaluation of Privacy and Anonymity."**
 
-## Step-by-Step Process (Tasks)
-To replicate our results, execute the following tasks in order:
+## 1. The Framework
+Our framework explicitly models privacy evaluations across five dimensions to prevent "apples-to-oranges" comparisons.
 
-### Task 1: Environment Setup
-Ensure Python 3.9+ is installed. Run the following to install dependencies:
-`pip install -r requirements.txt`
+![Privacy Evaluation Radar Framework](assets/framework_diagram.png)
 
-### Task 2: Data Inspection
-Navigate to `data/results.csv`. This dataset demonstrates the base-rate fallacy in Website Fingerprinting. Note the precision collapse from 0.94 (Closed) to 0.02 (Open).
+## 2. Reproduction Results (Case Study)
+We apply this framework to reproduce the "Open World vs. Closed World" discrepancy in Website Fingerprinting attacks.
 
-### Task 3: Security Boundary Mapping
-Run the mapping script to visualize the adversary dimensions:
-`python3 scripts/radar_gen.py`
+| Closed World (High Priors) | Open World (Realistic) |
+| :---: | :---: |
+| ![Closed World](plots/radar_closed.png) | ![Open World](plots/radar_open.png) |
+| *Artificial 90%+ Accuracy* | *Realistic <3% Accuracy* |
 
-### Task 4: Sensitivity Analysis
-Modify the `scores` array in `radar_gen.py` to reflect different adversary assumptions and observe how the security boundary (the blue area) expands or shrinks.
+## 3. Usage
+To regenerate these plots from the raw dataset:
+```bash
+python3 scripts/radar_gen.py
 
-## Dataset Metadata
-- **precision/recall**: Effectiveness of the attack.
-- **fpr**: False Positive Rate (critical for "Open World" evaluations).
-- **adversary_knowledge**: Mapping of Dimension A from the framework.
-
----
-*Author names redacted for double-blind review.*
+## 4. Full Submission
+The complete anonymous poster abstract is available here:
+[📄 Download Blinded Submission (PDF)](submission_blinded.pdf)
