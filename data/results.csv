@@ -1,0 +1,5 @@
+scenario,monitored_sites,unmonitored_sites,precision,recall,fpr,adversary_knowledge
+closed_world,100,0,0.94,0.91,0.001,High (Fixed Set)
+open_world_small,100,1000,0.45,0.88,0.015,Medium (Background Noise)
+open_world_large,100,10000,0.08,0.82,0.120,Realistic (High Noise)
+open_world_scaled,100,100000,0.02,0.75,0.450,Realistic (Scalability Test)
