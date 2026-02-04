@@ -24,4 +24,4 @@ python3 scripts/radar_gen.py
 
 ## 4. Full Submission
 The complete anonymous poster abstract is available here:
-[📄 Download Blinded Submission (PDF)](blinded_submission_fin_ver.pdf)
+[📄 Download Blinded Submission (PDF)](Poster_for_asiaccs_2026_fin_ver_1.pdf)
